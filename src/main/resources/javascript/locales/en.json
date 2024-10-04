@@ -1,0 +1,6 @@
+{
+  "cron-ui-selector": {
+    "label" : "Administration sample",
+    "hello" : "Hello"
+  }
+}

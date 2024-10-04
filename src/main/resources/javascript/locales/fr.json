@@ -1,0 +1,6 @@
+{
+  "cron-ui-selector": {
+    "label" : "Exemple d'administration",
+    "hello" : "Bonjour"
+  }
+}
