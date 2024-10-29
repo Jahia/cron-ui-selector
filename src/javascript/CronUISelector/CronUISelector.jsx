@@ -7,10 +7,6 @@ import './style.css';
 import * as Locales from './locales';
 
 export const CronUISelector = ({value, editorContext, onChange}) => {
-    // React.useEffect(() => {
-    //     import(`cron-input-ui/dist/locales/${editorContext.lang}.js`);
-    // }, [editorContext.lang]);
-
     const locale = Locales[`LOCALE_${editorContext?.uilang.toUpperCase() || editorContext.lang.toUpperCase()}`];
     return (
         <div style={{position: 'relative'}}>
