@@ -2680,6 +2680,11 @@ core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.3.tgz#a6042d3634c2b27e9328f837b965fac83808db85"
   integrity sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==
 
+cron-converter-u2q@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/cron-converter-u2q/-/cron-converter-u2q-1.0.1.tgz#13e40f445f505b5fc65b5fffc7518ddda98ac081"
+  integrity sha512-MEBBnQjN1t+qGTtiSqiwwdNNRHc8QlgdU6jIYueHJUvDG6xuckh39NxVuMAuPXC9J+z3COUzvGUWC+BsadoTiQ==
+
 cross-spawn@^7.0.1, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
