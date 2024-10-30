@@ -1,6 +1,49 @@
 {
-  "cron-ui-selector": {
-    "label" : "Exemple d'administration",
-    "hello" : "Bonjour"
+  "label" : {
+    "emptyLabel": "Sélectionner",
+    "frequencies": {
+      "none" : "Aucun",
+      "minute" : "Minute",
+      "hour" : "Heure",
+      "day" : "Jour",
+      "week" : "Semaine",
+      "month" : "Mois",
+      "year" : "Année"
+    },
+    "weekDays": {
+      "sun": "Dimanche",
+      "mon": "Lundi",
+      "tue": "Mardi",
+      "wed":"Mercredi",
+      "thu": "Jeudi",
+      "fri":"Vendredi",
+      "sat": "Samedi"
+    },
+    "months": {
+      "jan":"Janvier",
+      "feb":"Février",
+      "mar":"Mars",
+      "apr":"Avril",
+      "may":"Mai",
+      "jun":"Juin",
+      "jul":"Juillet",
+      "aug":"Août",
+      "sep":"Septembre",
+      "oct":"Octobre",
+      "nov":"Novembre",
+      "dec":"Décembre"
+    },
+    "prefix": {
+      "period": "Chaque",
+      "months": "en",
+      "monthDays": "le",
+      "weekDays": "le",
+      "hours": "à",
+      "minutes": ":",
+      "minutesForHourPeriod": "à"
+    },
+    "suffix": {
+      "minutesForHourPeriod": "minute(s) après l'heure"
+    }
   }
 }

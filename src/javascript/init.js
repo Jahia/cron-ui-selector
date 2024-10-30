@@ -1,5 +1,4 @@
 import {registry} from '@jahia/ui-extender';
-// Import {CronUISelector} from './CronUISelector';
 import {CronPicker} from './CronUISelector';
 
 export default function () {
