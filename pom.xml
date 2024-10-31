@@ -37,7 +37,11 @@
     <version>1.0.0</version>
     <packaging>bundle</packaging>
     <description>This is the custom ReactJS module (Cron UI selector) for running on a Jahia server.</description>
-
+    <scm>
+        <connection>scm:git:git@github.com:Jahia/cron-ui-selector.git</connection>
+        <developerConnection>scm:git:git@github.com:Jahia/cron-ui-selector.git</developerConnection>
+        <url>https://github.com/Jahia/cron-ui-selector</url>
+    </scm>
     <properties>
 <!--        <jahia-module-type>system</jahia-module-type>-->
         <yarn.arguments>build:production</yarn.arguments>
