@@ -129,9 +129,4 @@
             </properties>
         </profile>
     </profiles>
-
-
-  <scm>
-    <tag>cron-ui-selector-1.0.0</tag>
-  </scm>
 </project>
