@@ -23,7 +23,6 @@ const styles = (/* theme */) => ({
 
 const CronPickerCmp = ({classes, value = '', field: {readOnly}, onChange}) => {
     const {t} = useTranslation('cron-ui-selector');
-    // Const resourceBundle = Locales[`LOCALE_CRON_PICKER_${editorContext?.uilang.toUpperCase() || editorContext.lang.toUpperCase()}`];
     const [frequency, setFrequency] = useState('NONE');
     const [minute, setMinute] = useState('00');
     const [hour, setHour] = useState('00');
@@ -70,9 +69,10 @@ const CronPickerCmp = ({classes, value = '', field: {readOnly}, onChange}) => {
             }}/>
             {frequency === 'EVERY_HOUR' && (
                 <>
-                    <Typography className={classes.label} variant="body" component="span">
-                        {t('label.prefix.minutesForHourPeriod')} :
-                    </Typography>
+                    {Boolean(t('label.prefix.minutesForHourPeriod')) &&
+                        <Typography className={classes.label} variant="body" component="span">
+                            {t('label.prefix.minutesForHourPeriod')}
+                        </Typography>}
                     <DropdownNum {...{
                         value: minute,
                         data: MINUTES,
@@ -89,7 +89,7 @@ const CronPickerCmp = ({classes, value = '', field: {readOnly}, onChange}) => {
             {frequency === 'EVERY_WEEK' && (
                 <>
                     <Typography className={classes.label} variant="body" component="span">
-                        {t('label.prefix.weekDays')} :
+                        {t('label.prefix.weekDays')} {/* : */}
                     </Typography>
                     <DropdownStr {...{
                         value: weekDay,
@@ -104,7 +104,7 @@ const CronPickerCmp = ({classes, value = '', field: {readOnly}, onChange}) => {
             {['EVERY_MONTH', 'EVERY_YEAR'].includes(frequency) && (
                 <>
                     <Typography className={classes.label} variant="body" component="span">
-                        {t('label.prefix.monthDays')} :
+                        {t('label.prefix.monthDays')} {/* : */}
                     </Typography>
                     <DropdownNum {...{
                         value: monthDay,
@@ -117,9 +117,11 @@ const CronPickerCmp = ({classes, value = '', field: {readOnly}, onChange}) => {
 
             {frequency === 'EVERY_YEAR' && (
                 <>
-                    <Typography className={classes.label} variant="body" component="span">
-                        {t('label.prefix.months')} :
-                    </Typography>
+                    {Boolean(t('label.prefix.months')) &&
+                        <Typography className={classes.label} variant="body" component="span">
+                            {t('label.prefix.months')} {/* : */}
+                        </Typography>}
+
                     <DropdownStr {...{
                         value: month,
                         data: MONTHS,
@@ -133,7 +135,7 @@ const CronPickerCmp = ({classes, value = '', field: {readOnly}, onChange}) => {
             {['EVERY_DAY', 'EVERY_WEEK', 'EVERY_MONTH', 'EVERY_YEAR'].includes(frequency) && (
                 <>
                     <Typography className={classes.label} variant="body" component="span">
-                        {t('label.prefix.hours')} :
+                        {t('label.prefix.hours')} {/* : */}
                     </Typography>
                     <DropdownNum {...{
                         value: hour,
@@ -162,11 +164,6 @@ CronPickerCmp.propTypes = {
     field: PropTypes.shape({
         readOnly: PropTypes.bool
     }),
-    //     Lang: PropTypes.string.isRequired,
-    // EditorContext: PropTypes.shape({
-    //     lang: PropTypes.string.isRequired,
-    //     uilang: PropTypes.string
-    // }).isRequired,
     onChange: PropTypes.func.isRequired
 };
 

@@ -35,12 +35,12 @@
     },
     "prefix": {
       "period": "Chaque",
-      "months": "en",
+      "months": "",
       "monthDays": "le",
       "weekDays": "le",
       "hours": "à",
       "minutes": ":",
-      "minutesForHourPeriod": "à"
+      "minutesForHourPeriod": ":"
     },
     "suffix": {
       "minuteForHourPeriod": "minute après l'heure",

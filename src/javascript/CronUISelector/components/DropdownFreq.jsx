@@ -11,25 +11,6 @@ const styles = (/* theme */) => ({
         display: 'inline-block',
         marginLeft: 'var(--spacing-small)'
     }
-    // CopyButton: {
-    //     marginLeft: 'var(--spacing-small)'
-    // },
-    // fieldSetDescription: {
-    //     overflowWrap: 'anywhere',
-    //     marginTop: 'var(--spacing-nano)',
-    //     color: 'var(--color-dark60)',
-    //     backgroundColor: theme.palette.ui.epsilon,
-    //     width: '100%',
-    //     /* Height: theme.spacing.unit * 9, */
-    //     display: 'flex',
-    //     alignItems: 'center',
-    //     justifyContent: 'space-between',
-    //     border: '1px rgba(218, 218, 218, 0.4) solid',
-    //     // Border: '1px var(--color-gray40) solid',
-    //     // boxShadow: '1px 5px 6px rgba(64, 77, 86, 0.1)',
-    //     borderRadius: '2px',
-    //     padding: '6px'
-    // }
 });
 
 const DropdownFreqCmp = ({classes, value = '', onChange, readOnly}) => {
@@ -60,12 +41,12 @@ const DropdownFreqCmp = ({classes, value = '', onChange, readOnly}) => {
             // ImageSize="small"
             isDisabled={readOnly}
             variant="outlined"
-            size="medium"
+            size="small"
             data={dropdownData}
             label={label}
             value={value}
             // Icon={iconName && toIconComponent(iconName)}
-            hasSearch={dropdownData && dropdownData.length >= 5}
+            hasSearch={dropdownData && dropdownData.length > 12}
             searchEmptyText={t('content-editor:label.contentEditor.global.noResult')}
             onChange={(e, item) => onChange(item)}
             // OnBlur={onBlur}
