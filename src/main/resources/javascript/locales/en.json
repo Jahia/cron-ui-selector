@@ -43,7 +43,8 @@
       "minutesForHourPeriod": "at"
     },
     "suffix": {
-      "minutesForHourPeriod": "minute(s) past the hour"
+      "minuteForHourPeriod": "minute past the hour",
+      "minutesForHourPeriod": "minutes past the hour"
     }
   }
 }

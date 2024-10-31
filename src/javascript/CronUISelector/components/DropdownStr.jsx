@@ -2,10 +2,19 @@ import React from 'react';
 import {Dropdown/* , toIconComponent */} from '@jahia/moonstone';
 import {useTranslation} from 'react-i18next';
 import PropTypes from 'prop-types';
+import {withStyles} from '@material-ui/core';
 
-export const DropdownStr = ({value = '', data, labelKey, onChange, readOnly}) => {
+const styles = (/* theme */) => ({
+    dropDown: {
+        // MaxWidth: '100px',
+        display: 'inline-block',
+        marginLeft: 'var(--spacing-small)'
+    }
+});
+
+const DropdownStrCmp = ({classes, value = '', data, labelKey, onChange, readOnly}) => {
     const {t} = useTranslation('cron-ui-selector');
-    // TODO default value
+
     const {label/* , iconName */, dropdownData} = React.useMemo(() => ({
         label: t(value ? `label.${labelKey}.${value}` : 'label.emptyLabel'),
         // IconName: managedValue.config?.icon || '',
@@ -25,7 +34,7 @@ export const DropdownStr = ({value = '', data, labelKey, onChange, readOnly}) =>
 
     return (
         <Dropdown
-            className="flexFluid"
+            className={classes.dropDown}
             name="cron-frequency"
             id="cron-frequency"
             // ImageSize="small"
@@ -45,7 +54,8 @@ export const DropdownStr = ({value = '', data, labelKey, onChange, readOnly}) =>
     );
 };
 
-DropdownStr.propTypes = {
+DropdownStrCmp.propTypes = {
+    classes: PropTypes.object.isRequired,
     value: PropTypes.string,
     data: PropTypes.arrayOf(PropTypes.string).isRequired,
     labelKey: PropTypes.string.isRequired,
@@ -53,3 +63,5 @@ DropdownStr.propTypes = {
     // eslint-disable-next-line react/boolean-prop-naming
     readOnly: PropTypes.bool
 };
+
+export const DropdownStr = withStyles(styles)(DropdownStrCmp);

@@ -43,7 +43,8 @@
       "minutesForHourPeriod": "à"
     },
     "suffix": {
-      "minutesForHourPeriod": "minute(s) après l'heure"
+      "minuteForHourPeriod": "minute après l'heure",
+      "minutesForHourPeriod": "minutes après l'heure"
     }
   }
 }
