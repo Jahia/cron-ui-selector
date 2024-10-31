@@ -1,6 +1,50 @@
 {
-  "cron-ui-selector": {
-    "label" : "Administration sample",
-    "hello" : "Hello"
+  "label": {
+    "emptyLabel": "Select",
+    "frequencies": {
+      "none": "None",
+      "minute": "Minute",
+      "hour": "Hour",
+      "day": "Day",
+      "week": "Week",
+      "month": "Month",
+      "year": "Year"
+    },
+    "weekDays": {
+      "sun": "Sunday",
+      "mon": "Monday",
+      "tue": "Tuesday",
+      "wed": "Wednesday",
+      "thu": "Thursday",
+      "fri": "Friday",
+      "sat": "Saturday"
+    },
+    "months": {
+      "jan": "January",
+      "feb": "February",
+      "mar": "March",
+      "apr": "April",
+      "may": "May",
+      "jun": "June",
+      "jul": "July",
+      "aug": "August",
+      "sep": "September",
+      "oct": "October",
+      "nov": "November",
+      "dec": "December"
+    },
+    "prefix": {
+      "period": "Every",
+      "months": "in",
+      "monthDays": "on the",
+      "weekDays": "on",
+      "hours": "at",
+      "minutes": ":",
+      "minutesForHourPeriod": "at"
+    },
+    "suffix": {
+      "minuteForHourPeriod": "minute past the hour",
+      "minutesForHourPeriod": "minutes past the hour"
+    }
   }
 }
